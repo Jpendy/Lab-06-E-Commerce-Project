@@ -11,6 +11,8 @@ for (let i = 0; i < pokemonArray.length; i++){
     const description = document.createElement('p'); 
     const price = document.createElement('h2');
     const category = document.createElement('h3');
+    const button = document.createElement('button');
+
 
 
     name.textContent = pokemon.name;
@@ -21,8 +23,10 @@ for (let i = 0; i < pokemonArray.length; i++){
     price.textContent = pokemon.price;
     category.textContent = pokemon.category;
     list.style.listStyle = 'none';
+    button.value = pokemon.id;
+    button.textContent = 'Add to Cart'
 
-    list.append(name, img, description, price, category);
+    list.append(name, img, description, price, category, button);
 
     mainSection.appendChild(list);
 }
