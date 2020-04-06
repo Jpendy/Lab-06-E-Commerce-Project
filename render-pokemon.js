@@ -8,8 +8,8 @@ export function renderPokemon(pokemon) {
     const button = document.createElement('button');
     name.textContent = pokemon.name;
     img.src = pokemon.image;
-    img.style.height = '300px';
-    img.style.width = '300px';
+    img.style.height = '250px';
+    img.style.width = '250px';
     description.textContent = pokemon.description;
     price.textContent = pokemon.price;
     category.textContent = pokemon.category;
