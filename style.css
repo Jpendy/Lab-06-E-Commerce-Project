@@ -1,10 +1,13 @@
 header {
     margin: 200px auto;
-    width: 60%;
+    width: 54%;
     color: red;
     text-align: center;
     font-size: 30px;
     font-family: courier;
+    box-shadow: 2px 2px 80px 50px;
+    border-radius: 30px;
+    padding: 20px;
 }
 
 
@@ -14,5 +17,20 @@ section {
     text-align: center;
     font-size: 50px;
     font-family: courier;
+    color: red;
+}
+
+a {
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    background: black;
+    transition: 3s;
+    box-shadow: 2px 2px 20px 5px;
+    padding: 35px 65px;
+}
+
+a:hover {
+    background: yellow;
     color: red;
 }

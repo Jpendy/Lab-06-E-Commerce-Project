@@ -70,4 +70,5 @@ export const pokemonArray = [
         description: "Raticate's sturdy fangs grow steadily. To keep them ground down, it gnaws on rocks and logs. It may even chew on the walls of houses.",
         price: '$30.00'
     },
+    
 ];
