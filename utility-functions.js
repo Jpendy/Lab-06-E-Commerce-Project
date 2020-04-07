@@ -13,5 +13,4 @@ export function findById(pokemonArray, cartArray) {
 export function calcLineItem(quantity, price) {
     let lineTotal = quantity * price;
     return lineTotal;
-
 }
