@@ -4,7 +4,7 @@
 import { renderPokemon } from '../render-pokemon.js'; 
 const test = QUnit.test;
 
- test('time to test a function', function(assert) {
+test('time to test a function', function(assert) {
     //Arrange
     // Set up your parameters and expectations
     const charizard = {
