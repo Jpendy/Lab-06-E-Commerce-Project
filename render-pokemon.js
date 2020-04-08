@@ -1,5 +1,4 @@
 import { findById } from './utility-functions.js';
-//import pokemonArray from './pokemonArray.js';
 
 export function renderPokemon(pokemon) {
     const list = document.createElement('li');
@@ -22,14 +21,14 @@ export function renderPokemon(pokemon) {
     button.textContent = 'Add to Cart';
     button.addEventListener('click', () => {
 
-        let cartItem = localStorage.getItem('CART');
-        let cart;
-        console.log(cartItem);
-        if (cartItem) {
-            cart = JSON.parse(cartItem);
+        let cart = localStorage.getItem('CART');
+        
+        if (!cart) {
+            cart = [];
+            
         }
         else {
-            cart = [];
+            cart = JSON.parse(cart);
         }
         
         let item = findById(cart, pokemon.id);
@@ -46,8 +45,8 @@ export function renderPokemon(pokemon) {
             item.quantity++;
         }
 
-        cartItem = JSON.stringify(cart);
-        localStorage.setItem('CART', item);
+        cart = JSON.stringify(cart);
+        localStorage.setItem('CART', cart);
 
         alert('1 ' + pokemon.name + ' added to cart');
 
