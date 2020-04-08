@@ -7,6 +7,7 @@ import { renderCartTableRows } from './utility-functions.js';
 const tableBody = document.getElementById('table-body');
 const orderTotalSpan = document.getElementById('order-total');
 const orderButton = document.getElementById('order-button');
+const cartResetButton = document.getElementById('cart-reset-button');
 
 let cartArray = localStorage.getItem('CART');
 
@@ -39,4 +40,12 @@ else {
         alert('Order place:/n' + JSON.stringify(cartArray, true, 2));
         console.log(4);
     });
+
 }
+
+cartResetButton.addEventListener('click', ()=> {
+    localStorage.clear();
+    tableBody.textContent = null;
+    orderTotalSpan.textContent = null;
+});
+
