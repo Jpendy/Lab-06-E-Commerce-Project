@@ -92,7 +92,7 @@ test('calcOrderTotal', function(assert) {
         }
     ];
 
-    const expected = 4;
+    const expected = '$4.00';
 
 
     const result = calcOrderTotal(cartArray, pokemonArray);

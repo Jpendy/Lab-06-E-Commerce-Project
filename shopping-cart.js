@@ -10,13 +10,13 @@ const orderTotalSpan = document.getElementById('order-total');
 for (let i = 0; i < cartArray.length; i++) {
     let cart = cartArray[i];
     let pokemon = pokemonArray[i];
+    
     let pokemonIdIndex = findById(pokemonArray, cart.id);
 
     const tableRow = renderShoppingCartTableBody(cart, pokemon, pokemonIdIndex);
 
     tableBody.appendChild(tableRow);
 }
-console.log(4);
 
 const total = calcOrderTotal(cartArray, pokemonArray);
 orderTotalSpan.textContent = total;
