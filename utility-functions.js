@@ -47,8 +47,8 @@ export function renderShoppingCartTableBody(cart, pokemon, pokemonIdIndex) {
     let lineTotal = calcLineTotal(cart.quantity, pokemon.price);
     td1.textContent = pokemonIdIndex.name;
     td2.textContent = cart.quantity;
-    td3.textContent = pokemon.price;
-    td4.textContent = lineTotal;
+    td3.textContent = '$' + pokemon.price.toFixed(2);
+    td4.textContent = '$' + lineTotal.toFixed(2);
     tableRow.append(td1, td2, td3, td4);
     return tableRow;
 }
