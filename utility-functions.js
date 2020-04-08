@@ -12,9 +12,8 @@ export function findById(pokemonArray, idtoFind) {
 
 export function calcLineTotal(quantity, price) {
     let lineTotal = quantity * price;
-    let total = lineTotal;
-    
-    return total;
+    return lineTotal
+    ;
 
 }
 
@@ -38,17 +37,22 @@ export function calcOrderTotal(cartArray, pokemonArray) {
 }
 
 
-export function renderShoppingCartTableBody(cart, pokemon, pokemonIdIndex) {
+export function renderCartTableRows(cart, pokemonIdIndex) {
     const tableRow = document.createElement('tr');
     const td1 = document.createElement('td');
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
     const td4 = document.createElement('td');
-    let lineTotal = calcLineTotal(cart.quantity, pokemon.price);
+
+    let lineTotal = calcLineTotal(cart.quantity, pokemonIdIndex.price);
+
     td1.textContent = pokemonIdIndex.name;
     td2.textContent = cart.quantity;
-    td3.textContent = '$' + pokemon.price.toFixed(2);
+    td3.textContent = '$' + pokemonIdIndex.price.toFixed(2);
     td4.textContent = '$' + lineTotal.toFixed(2);
+
+    td4.classList.add('line-totals');
+
     tableRow.append(td1, td2, td3, td4);
     return tableRow;
 }

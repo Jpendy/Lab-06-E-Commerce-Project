@@ -4,6 +4,8 @@ import { findById } from '../utility-functions.js';
 import { calcLineTotal } from '../utility-functions.js';
 import { renderPokemon } from '../render-pokemon.js'; 
 import { calcOrderTotal } from '../utility-functions.js';
+import { renderCartTableRows } from '../utility-functions.js';
+import pokemonTestArray from '../pokemonArray.js';
 const test = QUnit.test;
 
 test('time to test a function', function(assert) {
@@ -37,7 +39,7 @@ test('time to test a function', function(assert) {
 
 test('findById', function(assert) {
 
-    const pokemonArray = {
+    const pokemonArrayTest = {
         id: 1,
         name: "Ash's Charizard",
         lowerName: 'charizard',
@@ -51,7 +53,7 @@ test('findById', function(assert) {
 
     const expected = "Ash's Charizard";
 
-    const result = findById(pokemonArray, idToFind);
+    const result = findById(pokemonArrayTest, idToFind);
 
     assert.equal(result, expected.name);
 });
@@ -98,5 +100,27 @@ test('calcOrderTotal', function(assert) {
     const result = calcOrderTotal(cartArray, pokemonArray);
 
     assert.equal(result, expected);
+
+});
+
+
+test('renderCartTableRows', function(assert) {
+
+    const cart = 
+        {
+            id: 1,
+            quantity: 2
+        }
+    ;
+
+    const pokemonIdIndex = findById(pokemonTestArray, cart.id);
+    const expected = `<tr><td>Ash's Charizard</td><td>2</td><td>$10.00</td><td class="line-totals">$20.00</td></tr>`;
+
+        
+    const result = renderCartTableRows(cart, pokemonIdIndex);
+    const el = result.outerHTML;
+
+    assert.equal(el, expected);
+
 
 });

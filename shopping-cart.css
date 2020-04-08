@@ -5,26 +5,65 @@
 }
 
 body {
-    background: -webkit-linear-gradient(lightblue, lightskyblue)
+    background: deepskyblue;
 }
+
 
 section {
     margin: 100px auto;
     width: 50%;
     text-align: center;
+    font-family: monospace;
+}
+
+thead {
+    font-size: 25px;
+
 }
 
 table {
-    border: 1px solid black;
-    padding: 40px;
+    margin: auto;
+    padding: 60px;
     border-radius: 30px;
+    background: -webkit-linear-gradient(yellow, orange);
+    text-align: center;
+    font-size: 24px;
+    box-shadow: 1px 2px 3px 10px;
+}
 
+th {
+    margin: 10px;
+    border: 10px solid blue;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 1px 2px 3px 4px;
 }
 
 td {
-    border: 1px solid black;
+    margin: 5px;
+    border:2px outset blue;
     padding: 20px;
+    border-radius: 200px;
+    box-shadow: 1px 2px 3px 4px;
+}
+
+button {
+    margin: 60px auto;
+    text-align: center;
+    background: -webkit-linear-gradient(yellow, orange);
+    font-family: monospace;
+    font-size: 40px;
+    padding: 40px 50px;
+
+
     
 }
+
+.line-totals, #order-total {
+    font-size: 24px;
+    font-weight: bold;
+
+}
+
 
 
