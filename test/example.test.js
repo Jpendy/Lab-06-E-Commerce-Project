@@ -1,7 +1,9 @@
 // IMPORT MODULES under test here:
 // import example from '../src/example.js';
-
+import { findById } from '../utility-functions.js';
+import { calcLineTotal } from '../utility-functions.js';
 import { renderPokemon } from '../render-pokemon.js'; 
+import { calcOrderTotal } from '../utility-functions.js';
 const test = QUnit.test;
 
 test('time to test a function', function(assert) {
@@ -29,4 +31,72 @@ test('time to test a function', function(assert) {
     //Assert
     // Make assertions about what is expected valid result
     assert.equal(expected, outerHTML);
+});
+
+
+
+test('findById', function(assert) {
+
+    const pokemonArray = {
+        id: 1,
+        name: "Ash's Charizard",
+        lowerName: 'charizard',
+        image: 'https://vignette.wikia.nocookie.net/iso33private/images/9/95/Charizard.png/revision/latest/scale-to-width-down/340?cb=20170727171344',
+        category: 'Fire / Flying / Dragon',
+        description: 'Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.',
+        price: '$2.00'
+    };
+
+    const idToFind = 1;
+
+    const expected = "Ash's Charizard";
+
+    const result = findById(pokemonArray, idToFind);
+
+    assert.equal(result, expected.name);
+});
+
+
+test('calcLineTotal', function(assert) {
+
+    const quantity = 5;
+    const price = 6;
+
+    const expected = 30;
+
+
+    const result = calcLineTotal(quantity, price);
+
+    assert.equal(result, expected);
+});
+
+
+test('calcOrderTotal', function(assert) {
+
+    const cartArray = [
+        {
+            id: 1,
+            quantity: 2
+        }
+    ];
+
+    const pokemonArray = [
+        {
+            id: 1,
+            name: "Ash's Charizard",
+            lowerName: 'charizard',
+            image: 'https://vignette.wikia.nocookie.net/iso33private/images/9/95/Charizard.png/revision/latest/scale-to-width-down/340?cb=20170727171344',
+            category: 'Fire / Flying / Dragon',
+            description: 'Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.',
+            price: 2.00
+        }
+    ];
+
+    const expected = 4;
+
+
+    const result = calcOrderTotal(cartArray, pokemonArray);
+
+    assert.equal(result, expected);
+
 });

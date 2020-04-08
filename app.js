@@ -12,3 +12,8 @@ for (let i = 0; i < pokemonArray.length; i++){
 }
 
 
+
+
+
+
+
