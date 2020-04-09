@@ -99,3 +99,12 @@ button:hover {
     text-align: center;
 
 }
+
+*/
+#bottom-checkout-button {
+    margin-bottom: 100px;
+}
+
+.checkout-buttons, a {
+    border-radius: 20px;
+}
