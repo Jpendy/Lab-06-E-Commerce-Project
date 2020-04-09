@@ -76,7 +76,7 @@ li {
     box-shadow: 2px 2px 20px 5px;
 }
 
-button {
+button, input {
     font-size: 20px;
     border: 1px solid black;
     padding: 10px;

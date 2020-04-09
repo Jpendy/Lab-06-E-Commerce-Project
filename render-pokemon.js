@@ -8,6 +8,7 @@ export function renderPokemon(pokemon) {
     const price = document.createElement('h2');
     const category = document.createElement('h3');
     const button = document.createElement('button');
+    const input = document.createElement('input');
 
     name.textContent = pokemon.name;
     img.src = pokemon.image;
@@ -19,6 +20,11 @@ export function renderPokemon(pokemon) {
     list.style.listStyle = 'none';
     button.value = pokemon.id;
     button.textContent = 'Add to Cart';
+    input.type = 'number';
+    input.min = '0';
+    input.max = '99';
+    
+    
     button.addEventListener('click', () => {
 
         let cart = localStorage.getItem('CART');
@@ -52,6 +58,6 @@ export function renderPokemon(pokemon) {
 
     });
    
-    list.append(name, img, description, price, category, button);
+    list.append(name, img, description, price, category, button, input);
     return list;
 }
