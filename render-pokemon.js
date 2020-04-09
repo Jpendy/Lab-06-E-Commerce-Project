@@ -22,9 +22,9 @@ export function renderPokemon(pokemon) {
     button.value = pokemon.id;
     button.textContent = 'Add to Cart';
     input.type = 'number';
-    input.min = '0';
+    input.min = '1';
     input.max = '99';
-
+    input.value = 1;
     
     button.addEventListener('click', () => {
         let cart = localStorage.getItem('CART');
@@ -55,7 +55,7 @@ export function renderPokemon(pokemon) {
         cart = JSON.stringify(cart);
         localStorage.setItem('CART', cart);
 
-        alert('1 ' + pokemon.name + ' added to cart');
+        alert(input.value + ' ' + pokemon.name + ' added to cart');
 
     });
    

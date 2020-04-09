@@ -43,6 +43,11 @@ export function renderCartTableRows(cart, pokemonIdIndex) {
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
     const td4 = document.createElement('td');
+    const removeItemButton = document.createElement('button');
+    
+    removeItemButton.classList.add('remove-line-button');
+    removeItemButton.textContent = 'Remove Item';
+    
 
     let lineTotal = calcLineTotal(cart.quantity, pokemonIdIndex.price);
 
@@ -53,6 +58,6 @@ export function renderCartTableRows(cart, pokemonIdIndex) {
 
     td4.classList.add('line-totals');
 
-    tableRow.append(td1, td2, td3, td4);
+    tableRow.append(td1, td2, td3, td4, removeItemButton);
     return tableRow;
 }
