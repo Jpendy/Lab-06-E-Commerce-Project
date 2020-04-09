@@ -17,11 +17,11 @@ test('time to test a function', function(assert) {
         lowerName: 'charizard',
         image: 'https://vignette.wikia.nocookie.net/iso33private/images/9/95/Charizard.png/revision/latest/scale-to-width-down/340?cb=20170727171344',
         category: 'Fire / Flying / Dragon',
-        description: 'Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.',
-        price: '$2.00'
+        description: 'Lazy and disobediant.. Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.',
+        price: 10.00
     };
  
-    const expected = `<li style="list-style: none;"><h2>Ash's Charizard</h2><img src="https://vignette.wikia.nocookie.net/iso33private/images/9/95/Charizard.png/revision/latest/scale-to-width-down/340?cb=20170727171344" style="height: 250px; width: 250px;"><p>Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.</p><h2>$2.00</h2><h3>Fire / Flying / Dragon</h3><button value="1">Add to Cart</button></li>`;
+    const expected = `<li style="list-style: none;"><h2>Ash's Charizard</h2><img src="https://vignette.wikia.nocookie.net/iso33private/images/9/95/Charizard.png/revision/latest/scale-to-width-down/340?cb=20170727171344" style="height: 200px; width: 200px;"><p>Lazy and disobediant.. Charizard flies around the sky in search of powerful opponents. It breathes fire of such great heat that it melts anything. However, it never turns its fiery breath on any opponent weaker than itself.</p><h2>$10.00</h2><h3>Fire / Flying / Dragon</h3><button value="1">Add to Cart</button><input type="number" min="0" max="99"></li>`;
     
     
     //Act 

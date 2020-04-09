@@ -38,7 +38,6 @@ else {
     orderButton.addEventListener('click', () => {
         localStorage.removeItem('CART');
         alert('Order place:/n' + JSON.stringify(cartArray, true, 2));
-        console.log(4);
     });
 
 }
