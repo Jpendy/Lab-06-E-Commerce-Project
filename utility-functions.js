@@ -43,8 +43,9 @@ export function renderCartTableRows(cart, pokemonIdIndex) {
     const td2 = document.createElement('td');
     const td3 = document.createElement('td');
     const td4 = document.createElement('td');
-    const removeItemButton = document.createElement('button');
-    
+
+
+    // const removeItemButton = document.createElement('button');
     // removeItemButton.classList.add('remove-line-button');
     // removeItemButton.textContent = 'Remove Item';
     
