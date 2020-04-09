@@ -1,0 +1,17 @@
+section {
+    margin: auto;
+    width: 70%;
+    text-align: center;
+
+}
+
+form {
+    margin: auto;
+    width: 50%;
+    text-align: left;
+}
+ 
+input {
+    margin: auto;
+    text-align: center;
+}
