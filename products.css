@@ -9,7 +9,7 @@ body {
 header {
     margin: auto;
     width: 100%;
-    height: 225px;
+    height: 410px;
     background: orangered;
     text-align: center;
     color: black;
@@ -18,16 +18,38 @@ header {
     border: 1px solid black;
     border-radius: 30px;
     box-shadow: 2px 2px 20px 4px;
+   
+}
+
+h1 {
+    border: 1px solid black;
+    margin: 40px auto;
+    width: 90%;
+    height: 110px;
+    text-align: center;
+    background: lightblue;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px 5px blue;
+    padding-top: 25px;
+    font-size: 50px;
+    color: darkblue;
+
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
 }
 
 a {
+    margin: auto;
     font-size: 30px;
-    border: 1px solid black;
     padding: 15px 40px;
-    background: lightblue;
-    border-radius: 20px;
-    box-shadow: 2px 2px 10px 5px;
+    background: -webkit-linear-gradient(lightblue, deepskyblue);
     transition: 1s;
+    text-align: center;
+
 }
 
 a:hover {
@@ -35,10 +57,6 @@ a:hover {
     color: white;
 }
 
-h1 {
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
 
 section {
     display: flex;
@@ -56,4 +74,37 @@ li {
     font-size: 20px;
     font-family: monospace;
     box-shadow: 2px 2px 20px 5px;
+}
+
+button, input {
+    font-size: 20px;
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 10px;
+    background: lightgreen;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 1px 2px 3px 2px;
+}
+
+button:hover {
+    background: orange;;
+}
+
+/*.checkout-buttons {
+    margin: 50px auto;
+    padding-top: 30px;
+    width: 300px;
+    height: 100px;
+    text-align: center;
+
+}
+
+*/
+#bottom-checkout-button {
+    margin-bottom: 100px;
+}
+
+.checkout-buttons, a {
+    border-radius: 20px;
 }

@@ -44,7 +44,14 @@ export function renderCartTableRows(cart, pokemonIdIndex) {
     const td3 = document.createElement('td');
     const td4 = document.createElement('td');
 
+
+    // const removeItemButton = document.createElement('button');
+    // removeItemButton.classList.add('remove-line-button');
+    // removeItemButton.textContent = 'Remove Item';
+    
+
     let lineTotal = calcLineTotal(cart.quantity, pokemonIdIndex.price);
+    
 
     td1.textContent = pokemonIdIndex.name;
     td2.textContent = cart.quantity;

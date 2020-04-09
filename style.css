@@ -1,6 +1,15 @@
+
+
+body {
+    background-image: url('https://www.mmogames.com/wp-content/uploads/2019/08/teamrocketwallpaper.jpg');
+    background-size: cover;
+    background-image: no-repeat;
+}
+
+
 header {
-    margin: 200px auto;
-    width: 54%;
+    margin: 100px auto;
+    width: 70%;
     color: red;
     text-align: center;
     font-size: 30px;
@@ -13,7 +22,7 @@ header {
 
 section {
     margin: auto;
-    width: 50%;
+    width: 70%;
     text-align: center;
     font-size: 50px;
     font-family: courier;
@@ -21,16 +30,17 @@ section {
 }
 
 a {
+    margin: 20px auto;
     border: 1px solid black;
-    padding: 10px;
     border-radius: 15px;
     background: black;
     transition: 3s;
     box-shadow: 2px 2px 20px 5px;
-    padding: 35px 65px;
+    padding: 25px 45px;
 }
 
 a:hover {
     background: yellow;
     color: red;
 }
+
