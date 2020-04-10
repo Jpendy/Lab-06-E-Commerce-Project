@@ -37,4 +37,6 @@ myForm.addEventListener('submit', (event) => {
     const stringyNewProducts = JSON.stringify(parsedPokemonInCloud);
 
     localStorage.setItem('PRODUCTS', stringyNewProducts);
+
+    alert(`You have added ${product.name} to the inventory`);
 });
