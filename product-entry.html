@@ -9,16 +9,19 @@
 <body>
     <main>
         <section>
-            <form action="submit">
-               <label for="id">   Id:  <input type="text"></label> <br>
-               <label for="name">  Name:    <input type="text">      </label> <br>
-               <label for="image">  Image:        <input type="text"> </label> <br>
-               <label for="category"> Category:    <input type="text">   </label> <br>
-               <label for="description">  Description:     <input type="text">   </label><br>
-               <label for="price">   Price: <input type="">         </label>
+            <form id="my-form">
+               <label for="id"> Id:<input type="text" name="id"></label> <br>
+               <label for="name"> Name:<input type="text" name="name"></label> <br>
+               <label for="image"> Image:<input type="text" name="image"></label> <br>
+               <label for="category"> Category:<input type="text" name="category"></label> <br>
+               <label for="description"> Description:<input type="text" name="description"></label><br>
+               <label for="price"> Price:<input type="number" name="price"></label>
                <button>Submit</button>
             </form>
+
+            <div> <a href="products.html">Go To Products</a> </div>
         </section>
     </main>
+    <script type="module" src="product-entry.js"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 //import { cartArray } from './cartArray.js';
 import { findById } from './utility-functions.js';
-import pokemonArray from './pokemonArray.js';
+//import pokemonArray from './pokemonArray.js';
 import { calcOrderTotal } from './utility-functions.js';
 import { renderCartTableRows } from './utility-functions.js';
 
@@ -10,6 +10,9 @@ const orderButton = document.getElementById('order-button');
 const cartResetButton = document.getElementById('cart-reset-button');
 
 let cartArray = localStorage.getItem('CART');
+let pokemonInCloud = localStorage.getItem('PRODUCTS');
+
+let parsedPokemonInCloud = JSON.parse(pokemonInCloud);
 
 if (cartArray) {
     cartArray = JSON.parse(cartArray);
@@ -21,14 +24,14 @@ else {
 for (let i = 0; i < cartArray.length; i++) {
     let cart = cartArray[i];
 
-    let pokemonIdIndex = findById(pokemonArray, cart.id);
+    let pokemonIdIndex = findById(parsedPokemonInCloud, cart.id);
 
     const tableRow = renderCartTableRows(cart, pokemonIdIndex);
 
     tableBody.appendChild(tableRow);
 }
 
-const total = calcOrderTotal(cartArray, pokemonArray);
+const total = calcOrderTotal(cartArray, parsedPokemonInCloud);
 orderTotalSpan.textContent = total;
 
 if (cartArray.length === 0) {

@@ -16,7 +16,7 @@ export function renderPokemon(pokemon) {
     img.style.height = '200px';
     img.style.width = '200px';
     description.textContent = pokemon.description;
-    price.textContent = '$' + pokemon.price.toFixed(2);
+    price.textContent = '$' + `${Number(pokemon.price).toFixed(2)}`;
     category.textContent = pokemon.category;
     list.style.listStyle = 'none';
     button.value = pokemon.id;
