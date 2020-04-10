@@ -16,7 +16,7 @@ export function renderPokemon(pokemon) {
     img.style.height = '200px';
     img.style.width = '200px';
     description.textContent = pokemon.description;
-    price.textContent = '$' + pokemon.price.toFixed(2);
+    price.textContent = '$' + `${Number(pokemon.price).toFixed(2)}`;
     category.textContent = pokemon.category;
     list.style.listStyle = 'none';
     button.value = pokemon.id;
@@ -27,36 +27,31 @@ export function renderPokemon(pokemon) {
     input.value = 1;
     
     button.addEventListener('click', () => {
-        let cart = localStorage.getItem('CART');
+        let cartArray = localStorage.getItem('CART');
 
-        if (!cart) {
-            cart = [];
-            
+        if (!cartArray) {
+            cartArray = [];          
         }
         else {
-            cart = JSON.parse(cart);
+            cartArray = JSON.parse(cartArray);
         }
         
-        let item = findById(cart, pokemon.id);
-
+        let item = findById(cartArray, pokemon.id);
         if (!item) {
             item = {
                 id: pokemon.id,
                 quantity: input.value
             };
-
-            cart.push(item);
+            cartArray.push(item);
         }
         else {
-
             item.quantity++;
         }
 
-        cart = JSON.stringify(cart);
-        localStorage.setItem('CART', cart);
+        cartArray = JSON.stringify(cartArray);
+        localStorage.setItem('CART', cartArray);
 
         alert(input.value + ' ' + pokemon.name + ' added to cart');
-
     });
    
     list.append(name, img, description, price, category, button, input);

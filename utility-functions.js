@@ -55,7 +55,7 @@ export function renderCartTableRows(cart, pokemonIdIndex) {
 
     td1.textContent = pokemonIdIndex.name;
     td2.textContent = cart.quantity;
-    td3.textContent = '$' + pokemonIdIndex.price.toFixed(2);
+    td3.textContent = '$' + `${Number(pokemonIdIndex.price).toFixed(2)}`;
     td4.textContent = '$' + lineTotal.toFixed(2);
 
     td4.classList.add('line-totals');
