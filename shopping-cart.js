@@ -11,7 +11,6 @@ const cartResetButton = document.getElementById('cart-reset-button');
 
 let cartArray = localStorage.getItem('CART');
 let pokemonInCloud = localStorage.getItem('PRODUCTS');
-
 let parsedPokemonInCloud = JSON.parse(pokemonInCloud);
 
 if (cartArray) {

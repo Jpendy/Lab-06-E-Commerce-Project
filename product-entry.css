@@ -26,11 +26,12 @@ input {
     margin: 80px 50px;
     text-align: center;
     border-radius: 10px;
+    font-size: 25px;
     
 }
 
 button {
-    margin: auto;
+    margin: 100px auto;
     font-size: 6px;
     cursor: pointer;
     transition: 0.7s;
@@ -41,12 +42,11 @@ button {
 }
 
 button:hover {
-    width: 400px;
-    height: 200px;
+    width: 460px;
+    height: 240px;
     background: lime;
     color: yellow;
     font-size: 90px;
-    transform: rotate(360deg);
 }
 
 div {
@@ -54,7 +54,7 @@ div {
 }
 
 a {
-    margin: 100px;
+    margin: auto;
     background: lime;
     font-size: 10px;
     padding: 30px;
@@ -66,6 +66,6 @@ a {
 a:hover {
     background: darkblue;
     color: red;
-    padding: 150px;
+    padding: 100px;
     font-size: 60px;
 }

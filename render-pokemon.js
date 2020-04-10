@@ -30,25 +30,21 @@ export function renderPokemon(pokemon) {
         let cartArray = localStorage.getItem('CART');
 
         if (!cartArray) {
-            cartArray = [];
-            
+            cartArray = [];          
         }
         else {
             cartArray = JSON.parse(cartArray);
         }
         
         let item = findById(cartArray, pokemon.id);
-
         if (!item) {
             item = {
                 id: pokemon.id,
                 quantity: input.value
             };
-
             cartArray.push(item);
         }
         else {
-
             item.quantity++;
         }
 
@@ -56,7 +52,6 @@ export function renderPokemon(pokemon) {
         localStorage.setItem('CART', cartArray);
 
         alert(input.value + ' ' + pokemon.name + ' added to cart');
-
     });
    
     list.append(name, img, description, price, category, button, input);

@@ -1,7 +1,6 @@
 import pokemonArray from './pokemonArray.js';
 const myForm = document.getElementById('my-form');
 
-
 myForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -32,7 +31,6 @@ myForm.addEventListener('submit', (event) => {
     const parsedPokemonInCloud = JSON.parse(pokemonInCloud);
 
     parsedPokemonInCloud.push(product);
-
 
     const stringyNewProducts = JSON.stringify(parsedPokemonInCloud);
 
